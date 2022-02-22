@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 12:07:13 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjEyOjA0OjE0ICI7MzYxNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjEyOjA3OjEzICI7MjszNzI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="8 % 3"/>
+            <assign variable="b" expression="4 + a"/>
+            <assign variable="c" expression="b * a"/>
+            <assign variable="d" expression="(c - a) * b"/>
+            <assign variable="e" expression="((a + 7) * (d / a)) * 0"/>
+            <output expression="&quot;a = &quot; &amp; a &amp; &quot;, b = &quot; &amp; b &amp; &quot;, c = &quot; &amp; c &amp; &quot;, d = &quot; &amp; d &amp; &quot;, e = &quot; &amp; e" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
