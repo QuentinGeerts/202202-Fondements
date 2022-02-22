@@ -1,0 +1,31 @@
+Liste des raccourcis intéressants : 
+
+-- Windows --
+
+> Sauvegarder un fichiers
+CTRL + S
+
+> Copier / Coller
+CTRL + C / CTRL + V
+
+> Capture d'écran d'une fenetre particulière
+Windows + Shift + S
+
+
+
+-- VSCode --
+
+> Dupliquer une ligne
+ALT + SHIFT + ↑ ou ↓
+
+> Déplacer une ligne
+ALT + ↑ ou ↓
+
+> Supprimer une ligne
+CTRL + SHIFT + K
+
+> Multi-curseur
+ALT + Clic gauche (à plusieurs endroits)
+
+> Mettre en commentaire
+CTRL + :

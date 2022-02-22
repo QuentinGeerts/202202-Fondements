@@ -1,0 +1,10 @@
+File > Preferences > Settings > (dans la recherche)
+
+-- Word-wrap
+Word Wrap > Editor: Word Wrap : on
+
+-- Mouse Wheel zoom
+Zoom > Editor: Mouse Wheel Zoom > Cocher
+
+-- Compact Folder
+ Compact > Explorer: Compact Folders > Décocher

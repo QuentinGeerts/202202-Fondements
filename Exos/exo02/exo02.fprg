@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 11:20:06 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjEwOjE1OjMxICI7MzYxNg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjExOjIwOjA2ICI7MzszNzI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo02-R&#233;cup&#233;rez le nom et le pr&#233;nom de l'utilisateur puis affichez le message &quot;Bienvenue prenom nom&quot;&#13;&#10;&#9679;Ex : Bienvenue Jules C&#233;sar"/>
+            <comment text="D&#233;claration de variables : nom et pr&#233;nom en chaine de caract&#232;res"/>
+            <declare name="nom, prenom" type="String" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur ses informations (nom et prenom)"/>
+            <output expression="&quot;Entrez votre nom : &quot;" newline="True"/>
+            <input variable="nom"/>
+            <output expression="&quot;Entrez le pr&#233;nom : &quot;" newline="True"/>
+            <input variable="prenom"/>
+            <comment text="Afficher le message de bienvenue"/>
+            <output expression="&quot;Bienvenue &quot; &amp; prenom &amp; &quot; &quot; &amp; nom" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

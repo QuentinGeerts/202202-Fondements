@@ -1,0 +1,17 @@
+Quelques extensions intéressantes : 
+
+> Material Icon Theme
+Extension pour les icones des fichiers/dossier
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+
+> Xmind Viewer
+Extension pour visualiser les fichiers en .xmind
+https://marketplace.visualstudio.com/items?itemName=cweijan.xmind-viewer
+
+> vscode-pdf
+Extension pour visualiser les fichiers pdf
+https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf
+
+> GitHub Theme
+Extension pour appliquer un thème à VSCode (thème GitHub)
+https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme

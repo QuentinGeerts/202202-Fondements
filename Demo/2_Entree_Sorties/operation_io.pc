@@ -1,0 +1,12 @@
+Algorithme EntreeSortie
+DEBUT
+  
+  Variable age : Entier
+
+  Ecrire("Donne ton age : ") // output : Donne ton age
+
+  Lire(age) // input : 20
+
+  Ecrire("Tu as " & age & " ans.") // output : Tu as 20 ans.
+
+FIN

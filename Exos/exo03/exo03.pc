@@ -1,0 +1,14 @@
+Algorithme Exo03
+DEBUT
+
+  // exo03
+  // Déterminez la valeur des variables de ce pseudo-code.
+  
+  Variable a, b, c, d, e : Entier
+
+  a <- 8 % 3 // 
+  b <- 4 + a // 
+  c <- b * a // 
+  d <- (c – a) * b // 
+  e <- ((a + 7) * (d / a)) * 0 // 
+FIN

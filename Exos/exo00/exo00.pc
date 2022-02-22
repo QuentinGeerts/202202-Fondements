@@ -1,0 +1,14 @@
+Algorithme Exo00
+DEBUT
+
+  // Déclarer une variable de type chaine de caractères nommée : message
+  // Initialiser la variable précédemment déclarée avec la valeur : "Bienvenue"
+  // Afficher le contenu de la variable message
+
+  Variable message : Chaine
+  message <- "Bienvenue"
+  Ecrire(message)
+
+  Ecrire(nomVariable)
+
+FIN

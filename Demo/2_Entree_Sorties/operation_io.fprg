@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 10:11:48 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjEwOjA4OjA5ICI7MzYyMw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjEwOjExOjQ4ICI7MjszNzI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Op&#233;ration d'entr&#233;e / sortie &#13;&#10;(I/O : Input / Output)"/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <output expression="&quot;Donne ton &#226;ge : &quot;" newline="True"/>
+            <input variable="age"/>
+            <output expression="&quot;Tu as &quot; &amp; age &amp; &quot; ans.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

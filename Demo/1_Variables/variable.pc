@@ -1,0 +1,19 @@
+Algorithme Variables
+DEBUT
+  // Déclaration d'une variable
+  // = Réservation en mémoire d'un emplacement
+  // pour une valeur dans un certains type
+  Variable prenom : Chaine
+  Variable nomDeFamille : Chaine
+
+  // Affectation 
+  // = Donner une valeur à une variable
+  // Initialisation
+  // = Première affectation
+  prenom <- "Quentin"
+  nomDeFamille <- "Geerts"
+
+  // afficher mon message
+  Ecrire("Mon nom est " & prenom & " " & nomDeFamille)
+
+FIN
