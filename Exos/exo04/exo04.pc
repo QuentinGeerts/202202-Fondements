@@ -1,0 +1,19 @@
+Algorithme Exo04
+DEBUT
+  // exo04 
+  // Bonus : Imaginez une méthode permettant d’inverser le contenu d’une variable entière SANS utiliser une variable temporaire.
+
+  Variable nb1, nb2 : Entier
+
+  nb1 <= 5
+  nb2 <= 11
+
+  Ecrire("Avant : nb1 = " & nb1 & " et nb2 = " & nb2)
+
+  nb1 <= nb1 + nb2
+  nb2 <= nb1 - nb2
+  nb1 <= nb1 - nb2
+
+  Ecrire("Après : nb1 = " & nb1 & " et nb2 = " & nb2)
+
+FIN
