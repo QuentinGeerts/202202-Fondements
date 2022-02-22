@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 03:02:24 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjAyOjA4OjAzICI7MzYxOA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjAzOjAyOjI0ICI7NDszNzI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo05 - R&#233;alisez un algorithme convertisseur de secondes. Ce dernier re&#231;oit un nombre de secondes et d&#233;termine le nombre de jours, heures, minutes et secondes auquel il correspond.&#13;&#10;&#13;&#10;Exemple&#13;&#10;&#13;&#10;4561 secondes correspondent &#224; 0 jour 1 heure 16 minutes et 1 seconde&#13;&#10;&#13;&#10;R&#233;fl&#233;chissez &#224; la m&#233;thode que nous devons utiliser. "/>
+            <comment text="Le nombre de secondes donn&#233;es par l'utilisateur"/>
+            <declare name="secondesUtilisateur" type="Integer" array="False" size=""/>
+            <comment text="Des variables de temps : jours, heures, minutes, secondes"/>
+            <declare name="jours, heures, minutes, secondes" type="Integer" array="False" size=""/>
+            <comment text="Constantes pour le nombre de secondes dans : une journ&#233;e, une heure et une minute"/>
+            <declare name="NBSJOUR, NBSHEURE, NBSMINUTE" type="Integer" array="False" size=""/>
+            <comment text="Initialiser les constantes"/>
+            <assign variable="NBSJOUR" expression="24 * 60 * 60"/>
+            <assign variable="NBSHEURE" expression="60 * 60"/>
+            <assign variable="NBSMINUTE" expression="60"/>
+            <comment text="Demander &#224; l'utilisateur de rentrer un nombre de secondes &#224; convertir"/>
+            <output expression="&quot;Entrez un nombre de secondes &#224; convertir en J-H-M-S : &quot;" newline="True"/>
+            <input variable="secondesUtilisateur"/>
+            <comment text="Traitement =&gt;&#13;&#10;1. Calcul du nombre de jours par rapport au nombre de secondes totales&#13;&#10;2. Calcul du nombre d'heures par rapport au nombre de secondes qu'il reste apr&#232;s le calcul des jours&#13;&#10;3. Calcul du nombre de minutes par rapport au nombre de secondes qu'il reste apr&#232;s le calcul des heures&#13;&#10;4. Calcul du nombre de secondes restantes apr&#232;s le calcul des minutes"/>
+            <assign variable="jours" expression="secondesUtilisateur / NBSJOUR"/>
+            <assign variable="heures" expression="(secondesUtilisateur % NBSJOUR) / NBSHEURE"/>
+            <assign variable="minutes" expression="((secondesUtilisateur % NBSJOUR) % NBSHEURE) / NBSMINUTE"/>
+            <assign variable="secondes" expression="((secondesUtilisateur % NBSJOUR) % NBSHEURE) % NBSMINUTE"/>
+            <comment text="Affichage de la dur&#233;e"/>
+            <output expression="secondesUtilisateur &amp; &quot; seconde(s) correspondent &#224; &quot; &amp; jours &amp; &quot; jour(s) &quot; &amp; heures &amp; &quot; heure(s) &quot; &amp; minutes &amp; &quot; minute(s) et &quot; &amp; secondes &amp; &quot; seconde(s)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
