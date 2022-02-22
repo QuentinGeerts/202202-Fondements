@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 04:41:38 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjA0OjMwOjE2ICI7MzYxOQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjI7IjA0OjQxOjM4ICI7MjszNzM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <assign variable="age" expression="15"/>
+            <declare name="estMineur" type="Boolean" array="False" size=""/>
+            <assign variable="estMineur" expression="age &lt; 18"/>
+            <if expression="estMineur">
+                <then>
+                    <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Bienvenue&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

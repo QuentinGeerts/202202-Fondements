@@ -1,0 +1,52 @@
+Algorithme DemoSC
+DEBUT
+  
+  // Structures Conditionnelles -> SI ... SINON ...
+
+  Variable age : Entier
+
+  age <- 20
+
+  SI age < 18 ALORS
+    Ecrire("Accès refusé")
+    // ...
+  SINON
+    Ecrire("Bienvenue")
+    // ...
+  FINSI
+
+  // -----------------------------
+
+  Variable isConnected : Booleen
+  isConnected <- Vrai
+
+  SI isConnected ALORS
+    // Créer une session
+    // Charge les informations de la personne
+    // etc ...
+  FINSI
+
+  // Structures Conditionnelles -> SI ... SINON SI ... SINON ...
+
+  Variable taille : Entier
+
+  taille <- 180
+
+  SI taille > 190 ALORS
+    Ecrire("Vous êtes très grand")
+  
+  SINONSI taille > 175 ET taille <= 190 ALORS
+    Ecrire("Vous êtes grand")
+
+  SINONSI taille > 165 ET taille <= 175 ALORS
+    Ecrire("Vous êtes de taille normale")
+  
+  SINONSI taille > 145 ET taille <= 165 ALORS
+    Ecrire("Vous êtes de petites tailles")
+    
+  SINON
+    Ecrire("Aucune taille répertoriée")
+  FINSI
+  
+
+FIN
