@@ -20,10 +20,31 @@ DEBUT
   Variable isConnected : Booleen
   isConnected <- Vrai
 
-  SI isConnected ALORS
+  SI isConnected == vrai ALORS
     // Créer une session
     // Charge les informations de la personne
     // etc ...
+  FINSI
+
+  // -----------------------------
+
+  SI temperature >= 5 ALORS
+
+    SI temperature <= 15 ALORS
+      // J'allume la chaudière
+    SINON
+      // J'éteins la chaudière
+    FINSI
+  SINON
+    // j'éteins la chaudière
+  FINSI
+
+  // -- 
+
+  SI temperature >= 5 ET temperature <= 15 ALORS
+    // J'allume la chaudière
+  SINON
+    // J'éteins la chaudière
   FINSI
 
   // Structures Conditionnelles -> SI ... SINON SI ... SINON ...
@@ -47,6 +68,33 @@ DEBUT
   SINON
     Ecrire("Aucune taille répertoriée")
   FINSI
+
+  // Structures Conditionnelles : SELONQUE 
+
+  Variable choix : Chaine
+
+  Ecrire("Menu : ")
+  Ecrire("1. Continuer le cours")
+  Ecrire("2. Prendre une pause")
+  Ecrire("3. Quitter la classe")
+  Lire(choix)
+
+  SELONQUE choix VAUT
+    "1" : 
+      // Continuer le cours
+      // Réaliser d'autres instructions
+    "2" : 
+      // Prendre une pause pendant 15 minutes
+      // Si 15 minutes atteinte ALORS reprendre le cours
+    "3" :
+      // Éteindre les PC
+      // Fermer les fenêtres
+      // Éteindre la lumière
+      // Dire au revoir
+    SINON : 
+      // Ne rien faire
+  FINSQ
+  
   
 
 FIN
