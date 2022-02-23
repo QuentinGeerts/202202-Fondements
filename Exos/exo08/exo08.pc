@@ -1,0 +1,36 @@
+// exo8-Lanceur de balles de tennis
+// Réalisez l’algorithme d’un lanceur de balles de tennis. Ce lanceur possède deux états (variables) :
+// –pret : permet de savoir si le tennisman est prêt. Il ne faut pas lancer de balles dans le cas contraire
+// –panierVide : permet de savoir s’il y a encore des balles disponibles
+// Le lanceur de balle possède l’opération « lancerBalle » qui, vous l’aurez compris, permet de lancer une
+// balle.
+
+Algorithme Exo08
+DEBUT
+  // Déclaration
+  Variable pret, panierVide : Booleen
+
+  // Demander à l'utilisateur les informations
+  Ecrire("Êtes-vous prêt ? (true / false)")
+  Lire(pret)
+
+  Ecrire("Le panier est-il vide ? (true / false)")
+  Lire(panierVide)
+
+  // Vérifier si on peut lancer la balle ou non
+  SI pret == true ET panierVide == false ALORS
+    Ecrire("Lancer la balle")
+  SINON
+    Ecrire("Ne pas lancer la balle")
+
+    SI !pret ALORS
+      Ecrire("Car vous n'êtes pas prêt")
+    FINSI
+
+    SI panierVide ALORS
+      Ecrire("Car votre panier est vide")
+    FINSI
+    
+  FINSI
+  
+FIN

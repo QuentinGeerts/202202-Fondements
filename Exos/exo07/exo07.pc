@@ -1,0 +1,29 @@
+// exo07-Année bissextile
+// Réalisez un petit algorithme qui sur base d’une année donnée va déterminer 
+// s’il s’agit d’une année bissextile. 
+// Une année est bissextile si elle est divisible par 4, mais non divisible par 100. 
+// Ou si elle est divisible par 400.
+// Bissextile : 2000, 1996 !Bissextile : 1900, 1997
+
+Algorithme Exo07
+DEBUT
+  
+  // Déclaration
+  Variable annee : Entier
+
+  // Demander à l'utilisateur de rentrer une année
+  Ecrire("Entrez une année :")
+  Lire(annee)
+
+  // Logique
+  SI annee % 4 == 0 
+    ET annee % 100 != 0 
+    OU annee % 400 == 0 ALORS
+    Ecrire("L'année est bissextile.")
+  SINON
+    Ecrire("L'année n'est pas bissextile.")
+  
+  FINSI
+  
+
+FIN

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 11:52:17 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjM7IjExOjQyOjI2ICI7MzYyMg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjM7IjExOjUyOjE3ICI7MjszNzMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo07-Ann&#233;e bissextile&#13;&#10;R&#233;alisez un petit algorithme qui sur base d&#8217;une ann&#233;e donn&#233;e va d&#233;terminer s&#8217;il s&#8217;agit d&#8217;une ann&#233;e&#13;&#10;bissextile. Une ann&#233;e est bissextile si elle est divisible par 4, mais non divisible par 100. Ou si elle est&#13;&#10;divisible par 400.&#13;&#10;Bissextile : 2000, 1996 !Bissextile : 1900, 1997"/>
+            <comment text="D&#233;claration&#13;&#10;"/>
+            <declare name="annee" type="Integer" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur de rentrer une ann&#233;e"/>
+            <output expression="&quot;Entrez une ann&#233;e : &quot;" newline="True"/>
+            <input variable="annee"/>
+            <comment text="Traitement - logique&#13;&#10;"/>
+            <if expression="annee % 4 == 0 &amp;&amp; annee % 100 != 0 || annee % 400 == 0">
+                <then>
+                    <output expression="&quot;L'ann&#233;e est bissextile&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;L'ann&#233;e n'est pas bissextile&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
