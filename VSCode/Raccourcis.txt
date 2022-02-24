@@ -32,3 +32,6 @@ ALT + Clic gauche (à plusieurs endroits)
 
 > Mettre en commentaire
 CTRL + :
+
+> Changer toutes les occurrences 
+CTRL + SHIFT + L
