@@ -1,0 +1,17 @@
+// exo13
+// À l’aide d’une boucle, affichez la table de multiplication par 2.
+
+Algorithme Exo13
+DEBUT
+  // Déclaration
+  Variable base, multiple, resultat : Entier
+  base <- 2
+  multiple <- 1
+
+  TANTQUE multiple <= 10 FAIRE
+    resultat <- base * multiple
+    Ecrire(base & " * " & multiple & " = " & resultat)
+    multiple <- multiple + 1
+  FINTQ
+  
+FIN

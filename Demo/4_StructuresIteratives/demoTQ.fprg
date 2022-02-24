@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 01:47:19 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjAxOjE0OjA1ICI7MzYxOA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjAxOjQ3OjE5ICI7MzszNzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Boucle TQ&#13;&#10;Permet de r&#233;p&#233;ter un bloc d'instructions TANT QUE la condition est vraie"/>
+            <comment text="D&#233;claration / Initialisation"/>
+            <declare name="compteur" type="Integer" array="False" size=""/>
+            <assign variable="compteur" expression="0"/>
+            <comment text="Condition"/>
+            <while expression="compteur &lt; 10">
+                <output expression="&quot;Valeur du compteur : &quot; &amp; compteur" newline="True"/>
+                <if expression="compteur == 3">
+                    <then>
+                        <assign variable="compteur" expression="10"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="Incr&#233;mentation / Modification"/>
+                <assign variable="compteur" expression="compteur + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

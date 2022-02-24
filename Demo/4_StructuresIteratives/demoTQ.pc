@@ -1,0 +1,24 @@
+// Boucle TQ
+// Permet de répéter un bloc d'instructions TANT QUE la condition est vraie
+
+Algorithme demoTQ
+DEBUT
+  
+  // Déclaration / Inialisation
+  Variable compteur : Entier
+  compteur <- 0
+
+  // Condition
+  TANTQUE compteur < 10 FAIRE
+    Ecrire("Valeur du compteur : " & compteur)
+
+    SI compteur == 3 ALORS
+      compteur <- 10
+    FINSI
+
+    // Incrémentation / Modification    
+    compteur <- compteur + 1
+  FINTQ
+  
+
+FIN
