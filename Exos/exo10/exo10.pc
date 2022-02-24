@@ -1,0 +1,62 @@
+// exo10-Calculatrice (SI+SELONQUE)
+// Réaliser l’algorithme d’une calculatrice basique.
+// L’utilisateur est invité à saisir un nombre, un opérateur, et un deuxième nombre. 
+// La calculatrice affiche ensuite le résultat. (Gérer la division par 0)
+
+Algorithme Exo10
+DEBUT
+  // Déclaration
+  Variable nb1, nb2, result : Reel
+  Variable op : Chaine
+
+  // Demander à l'utilisateur de rentrer les informations de calcul
+  Ecrire("Entrez le premier nombre : ")
+  Lire(nb1)
+
+  Ecrire("Entrez l'opérateur (+, -, *, /, %) : ")
+  Lire(op)
+  
+  Ecrire("Entrez le deuxième nombre : ")
+  Lire(nb2)
+
+  // Vérification de l'opérateur entré
+  SI op == "+" || op == "-" || op == "*" || op == "/" || op == "%" ALORS
+
+    SI op == "+" ALORS
+      // Addition
+      result <- nb1 + nb2
+
+    SINONSI op == "-" ALORS
+      // Soustraction
+      result <- nb1 - nb2
+
+    SINONSI op == "*" ALORS
+      // Multiplication
+      result <- nb1 * nb2
+
+    SINONSI op == "/" ALORS
+      // Division
+      SI nb2 != 0 ALORS
+        result <- nb1 / nb2
+      FINSI
+      
+    SINONSI op == "%" ALORS
+      // Modulo
+      SI nb2 != 0 ALORS
+        result <- nb1 % nb2
+      FINSI
+    FINSI 
+
+    SI op == "/" || op == "%" && nb2 == 0 ALORS
+      Ecrire("Division par 0 impossible")
+    SINON
+      Ecrire(nb1 & " " & op & " " & nb2 & " = " & result)
+    FINSI
+    
+
+  SINON
+    Ecrire("Opérateur non valide")
+  FINSI
+  
+  
+FIN

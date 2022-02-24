@@ -11,6 +11,9 @@ CTRL + C / CTRL + V
 > Capture d'écran d'une fenetre particulière
 Windows + Shift + S
 
+> Verrouiller le pc 
+Windows + L
+
 
 
 -- VSCode --

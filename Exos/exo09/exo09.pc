@@ -1,0 +1,64 @@
+// exo09-Distributeur de boissons (SI+SELONQUE)
+// Réalisez l’algorithme d’un distributeur de boissons. 
+// Ce dernier propose plusieurs boissons et l’utilisateur choisit celle qu’il désire 
+// en entrant le numéro correspondant. 
+// N'oubliez pas de vérifier s’il y a encore des boissons en stock.
+
+Algorithme Exo09
+Algorithme Exo09
+DEBUT
+  // Déclaration
+  Variable choix : Chaine
+
+  // Gestion des stocks
+  Variable stockEau, stockFanta, stockCafe : Entier
+  stockEau <- 0
+  stockFanta <- 5
+  stockCafe <- 1
+
+  // Menu qui propose différentes boissons
+  Ecrire("Menu :")
+  Ecrire("1. Eau")
+  Ecrire("2. Fanta")
+  Ecrire("3. Café")
+  Ecrire("Entrez votre choix :")
+
+  // Vérification du choix
+  SELONQUE choix VAUT
+    "1" : 
+      // Eau
+      // Vérification des stocks
+      SI stockEau > 0 ALORS
+        Ecrire("Voici votre boisson")
+        stockEau <- stockEau - 1
+      SINON
+        Ecrire("Plus de stock")
+      FINSI
+      
+    "2" : 
+      // Fanta
+      // Vérification des stocks
+      SI stockFanta > 0 ALORS
+        Ecrire("Voici votre boisson")
+        stockFanta <- stockFanta - 1
+      SINON
+        Ecrire("Plus de stock")
+      FINSI
+    
+    "3" :
+      // Café
+      // Vérification des stocks
+      SI stockCafe > 0 ALORS
+        Ecrire("Voici votre boisson")
+        stockCafe <- stockCafe - 1
+      SINON
+        Ecrire("Plus de stock")
+      FINSI
+
+    SINON : 
+      Ecrire("Choix inconnu")
+  FINSQ
+  
+  
+
+FIN

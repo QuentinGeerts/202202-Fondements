@@ -4,12 +4,44 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Quentin Geerts"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-23 03:15:43 "/>
+        <attribute name="saved" value="2022-02-23 04:28:08 "/>
         <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjM7IjAzOjE1OjMyICI7MzYyMA=="/>
-        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjM7IjAzOjE1OjQzICI7MTszNzMw"/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjM7IjA0OjI4OjA4ICI7MjszNzM3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
-        <body/>
+        <body>
+            <comment text="exo8-Lanceur de balles de tennis&#13;&#10;R&#233;alisez l&#8217;algorithme d&#8217;un lanceur de balles de tennis. Ce lanceur poss&#232;de deux &#233;tats (variables) :&#13;&#10;&#8211;pret : permet de savoir si le tennisman est pr&#234;t. Il ne faut pas lancer de balles dans le cas contraire&#13;&#10;&#8211;panierVide : permet de savoir s&#8217;il y a encore des balles disponibles&#13;&#10;Le lanceur de balle poss&#232;de l&#8217;op&#233;ration &#171; lancerBalle &#187; qui, vous l&#8217;aurez compris, permet de lancer une&#13;&#10;balle."/>
+            <comment text="D&#233;claration"/>
+            <declare name="pret, panierVide" type="Boolean" array="False" size=""/>
+            <comment text="Demander les informations &#224; l'utilisateur"/>
+            <output expression="&quot;&#202;tes-vous pr&#234;t ? (true / false)&quot;" newline="True"/>
+            <input variable="pret"/>
+            <output expression="&quot;Le panier est-il vide ? (true / false)&quot;" newline="True"/>
+            <input variable="panierVide"/>
+            <comment text="V&#233;rifier si on peut lancer la balle ou non"/>
+            <if expression="pret == true &amp;&amp; panierVide == false">
+                <then>
+                    <comment text="Lancer la balle"/>
+                    <output expression="&quot;Lancer la balle&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Ne pas lancer la balle"/>
+                    <output expression="&quot;Ne pas lancer la balle&quot;" newline="True"/>
+                    <if expression="!pret">
+                        <then>
+                            <output expression="&quot;Car vous n'&#234;tes pas pr&#234;t&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="panierVide">
+                        <then>
+                            <output expression="&quot;Car le panier est vide&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
     </function>
 </flowgorithm>
