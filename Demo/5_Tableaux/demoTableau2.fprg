@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 02:24:47 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjU7IjAyOjIwOjQ2ICI7MzYyMg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjU7IjAyOjI0OjQ3ICI7NTszNzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="entiers" type="Integer" array="True" size="5"/>
+            <declare name="indice" type="Integer" array="False" size=""/>
+            <assign variable="indice" expression="0"/>
+            <while expression="indice &lt;= 5">
+                <assign variable="entiers[indice]" expression="1"/>
+                <output expression="entiers[indice]" newline="True"/>
+                <assign variable="indice" expression="indice + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

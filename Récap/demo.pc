@@ -18,4 +18,21 @@ DEBUT
   Constante URL_MOODLE = "https://moodle.technofuturtic.be/course/view.php?id=2316"
 
   URL_MOODLE = "Quelque chose" // Impossible
+
+  // lowerCamelCase
+  nomDeFamille
+  intituleProfession
+
+  // UpperCamelCase
+  Personne
+
+  prenom1
+  prenom2
+  prenom3
+  // 1prenom
+  // 2prenom
+  // 3prenom
+
+  
+
 FIN

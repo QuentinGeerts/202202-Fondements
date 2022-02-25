@@ -1,0 +1,15 @@
+Algorithme demoTableau
+DEBUT
+  Variable notes : Tableau[12] de Reel
+
+  notes[0] <- 18
+  notes[1] <- 12.5
+  notes[2] <- 15
+  // ...
+
+
+  POUR indice DE 0 À size(notes) - 1 [PAR 1] FAIRE
+    Ecrire(notes[indice])
+  FINP
+  
+FIN

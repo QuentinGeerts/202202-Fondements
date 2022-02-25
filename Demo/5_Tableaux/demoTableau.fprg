@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 02:20:44 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjU7IjEyOjIzOjQ5ICI7MzYyOQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjU7IjAyOjIwOjQ0ICI7OTszNzM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TAILLE" type="Integer" array="False" size=""/>
+            <assign variable="TAILLE" expression="5"/>
+            <declare name="notes" type="Integer" array="True" size="TAILLE"/>
+            <declare name="indice, index" type="Integer" array="False" size=""/>
+            <declare name="somme, moyenne" type="Real" array="False" size=""/>
+            <comment text="Initialisation"/>
+            <assign variable="somme" expression="0"/>
+            <assign variable="indice" expression="0"/>
+            <comment text="Condition"/>
+            <while expression="indice &lt; size(notes)">
+                <output expression="&quot;Entrez la note de l'&#233;l&#232;ve n&#176;&quot; &amp; indice + 1 &amp; &quot;: &quot;" newline="True"/>
+                <input variable="notes[indice]"/>
+                <comment text="Incr&#233;mentation / modification"/>
+                <assign variable="indice" expression="indice + 1"/>
+            </while>
+            <assign variable="indice" expression="0"/>
+            <while expression="indice &lt; size(notes)">
+                <output expression="notes[indice]" newline="True"/>
+                <assign variable="indice" expression="indice + 1"/>
+            </while>
+            <for variable="index" start="0" end="size(notes) - 1" direction="inc" step="1">
+                <assign variable="somme" expression="somme + notes[index]"/>
+            </for>
+            <assign variable="moyenne" expression="somme / size(notes)"/>
+            <output expression="&quot;La somme de toutes les notes est de : &quot; &amp; somme &amp; &quot; et la moyenne est de &quot; &amp; moyenne" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
