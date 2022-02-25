@@ -35,3 +35,6 @@ CTRL + :
 
 > Changer toutes les occurrences 
 CTRL + SHIFT + L
+
+> Obtenir la liste des auto-complétions
+CTRL + espace

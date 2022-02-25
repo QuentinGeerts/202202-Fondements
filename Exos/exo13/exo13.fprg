@@ -4,20 +4,27 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Quentin Geerts"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-24 03:15:11 "/>
+        <attribute name="saved" value="2022-02-24 04:06:49 "/>
         <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjAzOjA0OjA4ICI7MzYyMg=="/>
-        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjAzOjE1OjExICI7MTszNzI2"/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjA0OjA2OjQ5ICI7MjszNzM5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="&#8226;exo13-&#192; l&#8217;aide d&#8217;une boucle, affichez la table de multiplication par 2."/>
+            <comment text="D&#233;claration des variables"/>
             <declare name="base, multiple, resultat" type="Integer" array="False" size=""/>
+            <comment text="Initialisation"/>
             <assign variable="multiple" expression="1"/>
             <assign variable="base" expression="2"/>
+            <comment text="Boucle pour parcourir et r&#233;aliser 10 fois le calcul"/>
+            <comment text="Condition"/>
             <while expression="multiple &lt;= 10">
+                <comment text="Calcul"/>
                 <assign variable="resultat" expression="base * multiple"/>
                 <output expression="base &amp; &quot; * &quot; &amp; multiple &amp; &quot; = &quot; &amp; resultat" newline="True"/>
+                <comment text="Incr&#233;mentation pour faire varier la condition"/>
+                <comment text="&lt;!&gt; Boucle si pas pr&#233;sent"/>
                 <assign variable="multiple" expression="multiple + 1"/>
             </while>
         </body>

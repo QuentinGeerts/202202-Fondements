@@ -1,0 +1,48 @@
+// exo21
+// Améliorez le "C'est plus, c'est moins, c'est gagné" pour qu'il tourne en boucle tant que le justePrix n'a pas été trouvé. 
+// L'ordinateur choisit un nombre aléatoirement entre 1 et 100. 
+// L'utilisateur est invité à entrer un nombre et l'algorithme nous répond "C'est plus" ou "C'est moins". 
+// Lorsqu'on a trouvé le bon nombre, l'algorithme affiche le nombre de tentatives effectuées pour trouver le résultat
+
+Algorithme Exo21
+DEBUT
+  // Déclaration
+  Variable justePrix, proposition, nbTentatives : Entier
+
+  // Générer le nombre aléatoire que je stock dans la variable justePrix
+  // Random(n): générer un nombre aléatoire entre 0 et le paramètre passé entre parenthèse 
+  // Random(100) => 100 - 1 => 0 et 99
+  justePrix <- Random(100) + 1
+
+  // initialiser la variable du compteur de tentatives
+  nbTentatives <- 0
+
+  // Initialiser la variable proposition pour rentrer une première fois dans la boucle TANT QUE
+  proposition <- 0
+
+  TANTQUE proposition != justePrix FAIRE
+    // Demander à l'utilisateur d'entrer une proposition pour deviner le juste prix
+    Ecrire("Entrez une proposition (entre 1 et 100) : ")
+    Lire(proposition)
+    // Incrémenter le compteur de tentatives
+    nbTentatives <- nbTentatives + 1
+
+    // Vérifier la proposition par rapport au juste prix
+    SI proposition == justePrix ALORS
+      // C'est gagné
+      Ecrire("Bravo, tu as trouvé le juste prix en " & nbTentatives & " tentative(s)")
+    SINON
+
+      SI proposition > justePrix ALORS
+        Ecrire("C'est moins")
+      SINON
+        Ecrire("C'est plus")
+      FINSI
+
+    FINSI
+
+  FINTQ
+  
+
+
+FIN

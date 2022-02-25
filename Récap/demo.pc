@@ -1,0 +1,21 @@
+Algorithme Demo
+DEBUT
+  // Déclaration des variables
+  Variable prenom : Chaine
+  Variable nom : Chaine
+  Variable age : Entier
+  Variable taille : Reel
+  Variable estAdulte : Booleen
+
+  // Affectation : donner une valeur à une variable
+  prenom <- "Quentin"
+  nom <- "Geerts"
+  age <- 25
+  taille <- 180.8 // Attention au point !!!!
+  estAdulte <- Vrai // Vrai ou Faux / True ou False
+
+  // Constantes
+  Constante URL_MOODLE = "https://moodle.technofuturtic.be/course/view.php?id=2316"
+
+  URL_MOODLE = "Quelque chose" // Impossible
+FIN

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 04:19:23 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjA0OjA2OjUwICI7MzYyMg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjA0OjE5OjIzICI7MjszNzM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#8226;exo16-Un algorithme re&#231;oit deux nombres de l&#8217;utilisateur (op&#233;ration Lire) :&#13;&#10;justePrix et proposition.&#13;&#10;&#8226;Il r&#233;pond : &#171; C&#8217;est plus &#187; lorsque proposition est plus petit que justePrix.&#13;&#10;&#8226;Et inversement, il r&#233;pond : &#171; C&#8217;est moins &#187; lorsque proposition est plus grand&#13;&#10;que justePrix.&#13;&#10;&#8226; Si justePrix est &#233;gal &#224; proposition, il r&#233;pond : &#171; C&#8217;est gagn&#233; &#187;.&#13;"/>
+            <comment text="D&#233;claration"/>
+            <declare name="justePrix, proposition" type="Integer" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur de rentrer le juste prix et la proposition"/>
+            <output expression="&quot;Entrez le juste prix : &quot;" newline="True"/>
+            <input variable="justePrix"/>
+            <output expression="&quot;Entrez la proposition : &quot;" newline="True"/>
+            <input variable="proposition"/>
+            <comment text="V&#233;rifier le proposition entr&#233;e par rapport au juste prix"/>
+            <if expression="proposition == justePrix">
+                <then>
+                    <comment text="c'est gagn&#233;"/>
+                    <output expression="&quot;C'est gagn&#233; ! Le juste prix &#233;tait : &quot; &amp; justePrix" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Pas gagn&#233;"/>
+                    <if expression="proposition &gt; justePrix">
+                        <then>
+                            <output expression="&quot;C'est moins&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;C'est plus&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

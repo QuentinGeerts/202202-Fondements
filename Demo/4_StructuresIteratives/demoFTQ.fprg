@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 04:23:22 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjA0OjE5OjIzICI7MzYyNg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjA0OjIyOjU0ICI7MTtRdWVudGluIEdlZXJ0cztERVNLVE9QLUQzNkdJSko7MjAyMi0wMi0yNDsiMDQ6MDY6NTAgIjtleG8xMy5mcHJnOzgzODE="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjQ7IjA0OjIzOjIyICI7NDszNzMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="compteur" type="Integer" array="False" size=""/>
+            <assign variable="compteur" expression="1"/>
+            <do expression="compteur &lt;= 10">
+                <output expression="&quot;Valeur compteur : &quot; &amp; compteur" newline="True"/>
+                <if expression="compteur == 3">
+                    <then>
+                        <assign variable="compteur" expression="10"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="compteur" expression="compteur + 1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

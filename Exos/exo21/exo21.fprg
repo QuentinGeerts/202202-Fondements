@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 11:52:29 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjU7IjExOjE4OjQ2ICI7MzYyOQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDItMjU7IjExOjUyOjI5ICI7NTszNzQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo21&#13;&#10;Am&#233;liorez le &quot;C'est plus, c'est moins, c'est gagn&#233;&quot; pour qu'il tourne en boucle tant que le justePrix n'a pas &#233;t&#233; trouv&#233;. &#13;&#10;L'ordinateur choisit un nombre al&#233;atoirement entre 1 et 100. L'utilisateur est invit&#233; &#224; entrer un nombre et l'algorithme nous r&#233;pond &quot;C'est&#13;&#10;plus&quot; ou &quot;C'est moins&quot;. &#13;&#10;Lorsqu'on a trouv&#233; le bon nombre, l'algorithme affiche le nombre de tentatives effectu&#233;es pour trouver le r&#233;sultat"/>
+            <comment text="D&#233;claration"/>
+            <declare name="justePrix, proposition, nbTentatives" type="Integer" array="False" size=""/>
+            <comment text="G&#233;n&#233;rer le nombre al&#233;atoire que je stock dans la variable justePrix"/>
+            <assign variable="nbTentatives" expression="0"/>
+            <assign variable="proposition" expression="0"/>
+            <comment text="Random(n): g&#233;n&#233;rer un nombre al&#233;atoire entre 0 et le param&#232;tre pass&#233; entre parenth&#232;se &#13;&#10;Random(100) =&gt; 100 - 1 =&gt; 0 et 99"/>
+            <assign variable="justePrix" expression="Random(100) + 1"/>
+            <while expression="proposition != justePrix">
+                <comment text="Demander &#224; l'utilisateur d'entrer une proposition pour deviner le juste prix"/>
+                <output expression="&quot;Entrez une proposition (entre 1 et 100) : &quot;" newline="True"/>
+                <input variable="proposition"/>
+                <assign variable="nbTentatives" expression="nbTentatives + 1"/>
+                <comment text="V&#233;rifier la proposition par rapport au juste prix"/>
+                <if expression="proposition == justePrix">
+                    <then>
+                        <comment text="C'est gagn&#233;"/>
+                        <output expression="&quot;Bravo, tu as trouv&#233; le juste prix !&quot;" newline="True"/>
+                        <output expression="&quot;En &quot; &amp; nbTentatives &amp; &quot; tentatives.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <comment text="C'est pas gagn&#233;"/>
+                        <if expression="proposition &gt; justePrix">
+                            <then>
+                                <output expression="&quot;C'est moins&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;C'est plus&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
