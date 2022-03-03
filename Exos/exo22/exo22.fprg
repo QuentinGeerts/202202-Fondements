@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-03 11:14:03 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDM7IjA5OjU5OjEzICI7MzYzMg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDM7IjExOjE0OjAzICI7NTszNzI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo23 : initialiser un tableau de 10 entiers avec les valeurs 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 &#224; l&#8217;aide d&#8217;une boucle. Ensuite, &#224; l&#8217;aide d&#8217;une boucle afficher la valeur de chaque cellule du tableau avec l&#8217;op&#233;ration Ecrire()."/>
+            <comment text="D&#233;claration"/>
+            <declare name="TAILLE" type="Integer" array="False" size=""/>
+            <assign variable="TAILLE" expression="10"/>
+            <declare name="entiers" type="Integer" array="True" size="TAILLE"/>
+            <declare name="indice, resultat" type="Integer" array="False" size=""/>
+            <declare name="message" type="String" array="False" size=""/>
+            <assign variable="message" expression="&quot;&quot;"/>
+            <comment text="Remplir le tableau"/>
+            <for variable="indice" start="0" end="TAILLE - 1" direction="inc" step="1">
+                <assign variable="entiers[indice]" expression="2 ^ (indice + 1)"/>
+            </for>
+            <comment text="Afficher le contenu du tableau"/>
+            <assign variable="indice" expression="0"/>
+            <while expression="indice &lt; TAILLE">
+                <assign variable="message" expression="message &amp; entiers[indice] &amp; &quot; | &quot;"/>
+                <assign variable="indice" expression="indice + 1"/>
+            </while>
+            <output expression="message" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

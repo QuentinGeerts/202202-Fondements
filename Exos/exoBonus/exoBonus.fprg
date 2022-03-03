@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-03 02:38:58 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDM7IjAxOjU2OjA5ICI7MzYyNg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDM7IjAyOjM4OjU4ICI7NDszNzQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Cr&#233;er un algorithme qui demande &#224; l'utilisateur de rentrer une taille pour un tableau.&#13;&#10;G&#233;n&#232;re des valeurs r&#233;elles al&#233;atoires pour remplir le tableau pr&#233;c&#233;dement cr&#233;&#233;.&#13;&#10;Trier le tableau dans un ordre croissant et d&#233;croissant."/>
+            <comment text="D&#233;claration et initialisation"/>
+            <declare name="taille, indice" type="Integer" array="False" size=""/>
+            <comment text="Demander la taille du tableau &#224; l'utilisateur"/>
+            <do expression="taille &lt; 1">
+                <output expression="&quot;Combien de valeurs voulez-vous g&#233;n&#233;rer dans votre tableau ?&quot;" newline="True"/>
+                <input variable="taille"/>
+            </do>
+            <declare name="tab" type="Real" array="True" size="taille"/>
+            <comment text="Remplir le tableau"/>
+            <for variable="indice" start="0" end="taille - 1" direction="inc" step="1">
+                <assign variable="tab[indice]" expression="random(101)"/>
+            </for>
+            <comment text="Pr&#233;paration de l'affichage avant"/>
+            <declare name="messageAvant" type="String" array="False" size=""/>
+            <assign variable="messageAvant" expression="&quot;&quot;"/>
+            <for variable="indice" start="0" end="taille - 1" direction="inc" step="1">
+                <assign variable="messageAvant" expression="messageAvant &amp; tab[indice] &amp; &quot; ~ &quot;"/>
+            </for>
+            <comment text="Trier le tableau"/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <declare name="temp" type="Real" array="False" size=""/>
+            <for variable="i" start="0" end="taille - 2" direction="inc" step="1">
+                <for variable="j" start="i + 1" end="taille - 1" direction="inc" step="1">
+                    <if expression="tab[i] &gt; tab[j]">
+                        <then>
+                            <assign variable="temp" expression="tab[i]"/>
+                            <assign variable="tab[i]" expression="tab[j]"/>
+                            <assign variable="tab[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <comment text="Pr&#233;paration de l'affichage apr&#232;s"/>
+            <declare name="messageApres" type="String" array="False" size=""/>
+            <assign variable="messageApres" expression="&quot;&quot;"/>
+            <for variable="indice" start="0" end="taille - 1" direction="inc" step="1">
+                <assign variable="messageApres" expression="messageApres &amp; tab[indice] &amp; &quot; ~ &quot;"/>
+            </for>
+            <comment text="Affichage des r&#233;sultats"/>
+            <output expression="messageAvant" newline="True"/>
+            <output expression="messageApres" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

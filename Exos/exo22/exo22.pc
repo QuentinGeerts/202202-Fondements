@@ -1,0 +1,29 @@
+// exo23 : initialiser un tableau de 10 entiers avec les valeurs 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 à l’aide d’une boucle. Ensuite, à l’aide d’une boucle afficher la valeur de chaque cellule du tableau avec l’opération Ecrire().
+
+Algorithme Exo22
+DEBUT
+  
+  // Déclaration
+  Constante TAILLE = 10
+  Variable entiers : Tableau[TAILLE] de Entier
+  Variable indice, resultat : Entier
+  Variable message : Chaine
+
+  message <- ""
+
+  // Remplir le tableau
+  POUR indice DE 0 À TAILLE - 1 [PAR 1] FAIRE
+    entiers[indice] <- 2 ^ (indice + 1)
+  FINP
+  
+  // Afficher le contenu du tableau
+  indice <- 0
+
+  TANTQUE indice < TAILLE FAIRE
+    message <- message & entiers[indice] & " | "
+    indice <- indice + 1
+  FINTQ
+  
+  Ecrire(message)
+
+FIN
